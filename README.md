@@ -80,6 +80,10 @@ Local: http://localhost:XXXX/
 ```
 Utilize esse link no navegador.
 
+## 🌍 Deploy
+
+A aplicação está disponível em: https://buscar-receitas.vercel.app/
+
 ## 👩‍💻 Autora
 
 Desenvolvido por [Maria Clara Nascimento de Jesus](https://www.linkedin.com/in/mariaclarandj).  
