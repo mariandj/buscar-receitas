@@ -1,7 +1,7 @@
 import { useRecipeContext } from "../contexts/RecipeContext";
 import RecipeCard from "./RecipeCard";
 
-function RecipeList() {
+function RecipeList({ onEdit }) {
   const { recipes, loading, error, searched, selectRecipe } = useRecipeContext();
 
   if (loading) {
@@ -13,16 +13,19 @@ function RecipeList() {
   }
 
   if (!searched) {
-    return <p className="status-message">Faça uma busca para visualizar receitas.</p>;
+    return (
+      <p className="status-message">Faça uma busca para visualizar receitas.</p>
+    );
   }
 
   return (
     <div className="recipe-grid">
       {recipes.map((recipe) => (
         <RecipeCard
-          key={recipe.idMeal}
+          key={recipe._id}
           recipe={recipe}
           onSelect={selectRecipe}
+          onEdit={onEdit}
         />
       ))}
     </div>
