@@ -1,6 +1,6 @@
 # 🍽️ Buscador de Receitas — Fullstack
 
-Aplicação **fullstack em 3 camadas** (React.js → Express.js → MongoDB Atlas) desenvolvida para a **Entrega 2 / Projeto 2** da disciplina de Programação Web Fullstack. Evolui o Projeto 1 (Buscador de Receitas) adicionando **login**, **busca** e **inserção** de receitas com autenticação e persistência em banco de dados.
+Aplicação **fullstack em 3 camadas** (React.js → Express.js → MongoDB Atlas) desenvolvida para a **Entrega 2** da disciplina de Programação Web Fullstack. Evolui o Projeto 1 (Buscador de Receitas) adicionando **login**, **busca** e **inserção** de receitas com autenticação e persistência em banco de dados.
 
 ## 🎯 Objetivo
 

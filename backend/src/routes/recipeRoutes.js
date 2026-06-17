@@ -10,9 +10,7 @@ const router = express.Router();
 // Todas as rotas de receita exigem token JWT válido.
 router.use(autenticar);
 
-// ---------------------------------------------------------------------------
 // Cache simples em memória com TTL curto (60s) para buscas.
-// ---------------------------------------------------------------------------
 const cache = new Map();
 const CACHE_TTL_MS = 60 * 1000;
 
@@ -86,10 +84,8 @@ function processarDadosReceita(body) {
   };
 }
 
-// ---------------------------------------------------------------------------
 // GET /api/recipes?search=termo
 // Busca por title, category, area e ingredients. Sem search, retorna tudo.
-// ---------------------------------------------------------------------------
 router.get("/", async (req, res) => {
   try {
     const search = typeof req.query.search === "string" ? req.query.search.trim() : "";
@@ -132,10 +128,8 @@ router.get("/", async (req, res) => {
   }
 });
 
-// ---------------------------------------------------------------------------
 // POST /api/recipes
 // Insere uma nova receita (com validação e sanitização no servidor).
-// ---------------------------------------------------------------------------
 router.post("/", async (req, res) => {
   try {
     const { erros, dados } = processarDadosReceita(req.body);
@@ -165,10 +159,8 @@ router.post("/", async (req, res) => {
   }
 });
 
-// ---------------------------------------------------------------------------
 // PUT /api/recipes/:id
 // Atualiza uma receita existente (com validação e sanitização no servidor).
-// ---------------------------------------------------------------------------
 router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
